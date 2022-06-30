@@ -1,0 +1,217 @@
+@font-face {
+  font-family: "DM Sans";
+  src: url('../fonts/DMSans-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+@font-face {
+  font-family: "DM Sans";
+  src: url('../fonts/DMSans-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "DM Sans";
+  src: url('../fonts/DMSans-Italic.ttf') format('truetype');
+  font-weight: normal;
+  font-style: italic;
+}
+
+html {
+  font-family: "DM Sans", sans-serif;
+  color: white;
+}
+
+footer {
+  text-align: center;
+  margin: 20px;
+  padding: 20px;
+}
+
+header {
+  color: white;
+  font-weight: bold;
+  font-style: normal;
+  text-align: center;
+  font-size: 50px;
+  padding: 0;
+  margin: 40px 0;
+}
+
+.cs-pg-hdr {
+  font-size: 40px;
+  margin: 20px 0;
+}
+
+body {
+  opacity: 0;
+  transition-duration: 1.5s;
+  transition-property: opacity;
+}
+
+.fade {
+  opacity: 1;
+}
+
+h1 {
+  padding: 0;
+  margin: 0;
+}
+
+h3 {
+  padding: 0;
+  margin: 0;
+  font-size: 35px;
+}
+
+h4 {
+  margin: 30px 0 0 0;
+  font-size: 21px;
+}
+
+nav {
+  margin: 0;
+  padding: 0;
+  max-width: 300px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #9C9C9C;
+}
+
+nav ul {
+  margin: auto;
+  font-weight: bold;
+  font-size: 35px;
+  text-align: left;
+  padding: 0 10px;
+  list-style: none;
+}
+
+nav li {
+  margin: 22px 0 0 0;
+}
+
+
+.smaller-nav {
+  font-size: 27px;
+  margin: 15px 15px;
+  padding: 0;
+}
+
+.active {
+  color: white;
+}
+
+/* backgrounds different for each page */
+.about-pg-bkg {
+  background: url("../images/mtn-bkg-darker.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.centered-box {
+  margin: auto;
+}
+
+main {
+  width: 1200px;
+  margin: auto;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  margin: auto;
+}
+
+.middle-content {
+  margin: 0 0 0 80px;
+  max-width: 700px;
+}
+
+.ab-middle-content {
+  max-width: 500px;
+}
+
+.intro-p {
+
+  font-weight: bold;
+  font-size: 23px;
+}
+
+
+.home-navbar {
+  color: white;
+  font-size: 30px;
+  text-decoration: none;
+}
+
+/* cs portfolio stuff */
+.cs-page-bkg {
+  background: rgb(36, 40, 59);
+  background: linear-gradient(180deg, rgba(36, 40, 59, 1) 0%, rgba(38, 41, 60, 1) 49%, rgba(56, 53, 69, 1) 73%, rgba(70, 62, 76, 1) 86%, rgba(95, 78, 89, 1) 93%, rgba(118, 93, 101, 1) 97%, rgba(144, 110, 114, 1) 100%, rgba(180, 133, 133, 1) 100%);
+  margin: 0;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.timeline {
+  margin: 30px 30px;
+  display: grid;
+  color: white;
+  grid-template-columns: 0fr 2px 2fr;
+}
+
+.timeline_component_right {
+  margin: 0 20px 40px 20px;
+}
+
+.timeline_date_right {
+  margin: 0;
+  text-align: right;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.timeline__middle {
+  position: relative;
+  background: #9C8585;
+}
+
+.timeline__point {
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #9C8585;
+  border-radius: 50%;
+}
+
+.timeline__point--bottom {
+  top: initial;
+  bottom: 0;
+}
+
+.timeline_title {
+  margin: 0 0 7px 0;
+  padding: 0;
+  font-weight: bold;
+  font-size: 25px;
+}
+
+
+.timeline_text {
+  list-style-position: inside;
+  margin: 0 10px;
+  padding: 0;
+  font-size: 17px;
+}
