@@ -1,5 +1,5 @@
-document.body.classList.add('fade');
 
+document.body.classList.add('fade');
 const activePg = window.location.pathname;
 const navLinks = document.querySelectorAll('nav a').forEach(link => {
   if (link.href.includes(`${activePg}`)) { link.classList.add('active') }
@@ -8,3 +8,4 @@ const navLinks = document.querySelectorAll('nav a').forEach(link => {
     link.addEventListener('mouseout', function changeColor() { link.style.color = '#9C9C9C' })
   }
 })
+

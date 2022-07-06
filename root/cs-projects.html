@@ -32,27 +32,314 @@
             </li>
           </ul>
           <li>
-            <a id="art" href="art-blog.html">art blog</a>
+            <a id="art" href="personal-blog.html">personal blog</a>
           </li>
         </ul>
       </nav>
-      <div class="middle-content">
+      <div class="cs-proj-content">
         <div class="row">
-          <div>
-            <h4>front-end development:</h4>
-            <ul class="timeline_text">
-              <li>this website!</li>
-              <li>static website</li>
-              <li>dynamic website backed by database</li>
+          <div class="cs-proj-box">
+            <h4>Front-end development</h4>
+            <ul class="timeline_text bold">
+              <a class="proj-link" href="#personal-website">
+                <li class="li-cs">Personal website</li>
+              </a>
+              <a class="proj-link" href="#server-side">
+                <li>Server-Side Rendered Plant Catalog Backed by a Database</li>
+              </a>
             </ul>
           </div>
-          <div>
-            <h4>functional programming (OCaml):</h4>
-            <p></p>
+          <div class="cs-proj-box">
+            <h4>Functional programming (OCaml)</h4>
+            <ul class="timeline_text bold">
+              <a class="proj-link" href="#interpreter">
+                <li class="li-cs">Interpreter for non-trivial programming language</li>
+              </a>
+              <a class="proj-link" href="#pokemon">
+                <li class="li-cs">Interactive Pokemon Game</li>
+              </a>
+              <a class="proj-link" href="#adventure">
+                <li class="li-cs">Data-driven Adventure game and Game engine</li>
+              </a>
+              <a class="proj-link" href="#rb">
+                <li>Search Engine using Functors and Red-black trees</li>
+              </a>
+            </ul>
           </div>
 
         </div>
+        <div class="row larger-bottom">
+          <div class="cs-proj-box">
+            <h4>C++/C</h4>
+            <ul class="timeline_text bold">
+              <a class="proj-link" href="#handwriting">
+                <li class="li-cs">Handwriting Recognition model with multi-threading</li>
+              </a>
+              <a class="proj-link" href="#sorting-algo">
+                <li>Sorting Algorithms' implementation and performance analysis</li>
+              </a>
+            </ul>
+          </div>
+          <div class="cs-proj-box">
+            <h4>Java</h4>
+            <ul class="timeline_text bold">
+              <a class="proj-link" href="#search-game">
+                <li class="li-cs">Search-and-retrieve game using Hashmaps</li>
+              </a>
+              <a class="proj-link" href="#dijkstra">
+                <li>Dijkstra's shortest path algorithm implementation</li>
+              </a>
+            </ul>
+          </div>
+        </div>
       </div>
+    </div>
+
+    <h1 class="cs-page-title">all projects:</h1>
+
+    <h2>Front-end development</h2>
+    <div class="cs-proj-descrip">
+      <a id="personal-website"></a>
+      <h3>Personal website:</h3>
+      <div class="row">
+        <img src="../public/images/caticon.png" alt="Website icon (cat)">
+        <div>
+          <h4>Skills: HTML, CSS, Javascript, GitHub pages</h5>
+            <ul class="font-22">
+              <li>
+                Designed personal website for front-end development/design practice
+              </li>
+              <li>
+                Leveraged Javascript to create interactive website
+              </li>
+              <li>
+                Hosting site via GitHub pages
+              </li>
+              <li>
+                Looking to refactor into AngularJS app and shift to different host like AWS Beanstalk
+              </li>
+            </ul>
+        </div>
+      </div>
+      <b class="project-description">Details:</b>
+      <p class="project-description">This website is my personal website to
+        showcase my CS portfolio and skills and other personal
+        interests in my blog. I'm currently using GitHub pages to host this
+        website. For the future, I plan on refactoring this into
+        an AngularJS app and moving to Heroku or AWS Beanstalk to
+        include dynamic features, custom routing, and more.
+      </p>
+    </div>
+    <div class="larger-bottom"></div>
+    <div class="cs-proj-descrip">
+      <a id="server-side"></a>
+      <h3>Server-Side Rendered Plant Catalog Backed by a Database:</h3>
+      <h4>Skills: PHP, SQL, HTML, CSS, Docker</h4>
+      <ul class="font-22">
+        <li>
+          Designed plant catalog website and stored plant data in database
+        </li>
+        <li>Created custom routing and other server-side tasks with PHP</li>
+        <li>Coded SQL queries for filtering and sorting options for browsing</li>
+        <li>Created 'sticky' forms for user to add to plant catalog via SQL queries</li>
+        <li>Coded forms to recall user's input and provide feedback for incomplete submissions</li>
+      </ul>
+      <b class="project-description">Details:</b>
+      <div class="row">
+        <p class="project-description">
+          This project is a website that displays a
+          plant catalog, intended for an audience to find suitable plants for
+          children to play with. The data for each plant is stored
+          in a database, and users can apply filters or sorting methods
+          to browse through the plant catalog. SQL queries were used to
+          support those filter/sort options, and PHP was used to support custom
+          routing and server-side rendering.
+        </p>
+        <div>
+          <img id="resize-600" src="../public/images/playful-plants-filter.png" alt="Plant catalog with filtering">
+        </div>
+      </div>
+      <div class="row larger-bottom">
+        <p class="project-description">
+          The website also includes a form for adding a new plant to the catalog.
+          If the requirements of the form are incomplete after submission, the
+          user's original inputs remain, and the form provides corrective feedback.
+          SQL queries were used to add this plant to the database.
+        </p>
+        <img id="resize-400" src="../public/images/plant-form.png" alt="Plant catalog form">
+      </div>
+    </div>
+    <h2>Functional Programming (OCaml)</h2>
+    <div class="cs-proj-descrip">
+      <a id="interpreter"></a>
+      <h3>Interpreter for non-trivial programming language:</h3>
+      <h4>Skills: OCaml, OUnit testing, CMake</h4>
+      <ul class="font-22">
+        <li>Constructed syntax and interpreter of 'robot programming language' (RML)</li>
+        <li>Implemented Abstract Syntax Tree to parse characters into keywords/tokens</li>
+        <li>Implemented evaluator of interpreter to allow execution of RML programs</li>
+        <li>Leveraged promises and concurrent programming for RML's own asynchronous expressions</li>
+        <li>Unit tested code with OCaml's OUnit test framework</li>
+      </ul>
+      <b class="project-description">Details:</b>
+      <div class="row larger-bottom">
+        <div>
+          <p class="project-description">
+            <em>
+              Background information on interpreters:</em>
+            In order to implement a programming language, implementing the
+            compiler or interpreter is necessary so that the computer
+            is able to understand and execute the source program in that
+            language. Compilers/interpreters go through multiple phases when
+            translating a language: lexing, parsing, semantic analysis,
+            then evaluation.
+            Lexing converts the source program into tokens like keywords,
+            then parsing uses those tokens to construct an Abstract Syntax Tree
+            (AST), which describes the structure of the program. Semantic analysis
+            then checks whether the code written is valid, and finally, the program
+            is executed/evaluated.
+          <p class="project-description">
+            In this project, the AST was implemented to allow the lexer and parser
+            to create the AST, and the evaluator was also implemented to actually
+            execute programs with this language. Shown in the images are the language's REPL
+            (read-evaluate-print-loop) that supports basic operations along
+            with more complex expressions like variable assignment, anonymous functions
+            and more.
+          </p>
+        </div>
+        <div>
+          <div>
+            <p class="img-descrip">Basic operations:</p>
+            <img src="../public/images/basic-op-rml.png" alt="Basic operations in programming language">
+          </div>
+          <div>
+            <p class="img-descrip">Complex expressions:</p>
+            <img src="../public/images/expressions-rml.png" alt="Expressions in RML">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="cs-proj-descrip">
+      <a id="pokemon"></a>
+      <h3>Interactive Pokemon Game:</h3>
+      <h4>Skills: OCaml, JSON, OUnit test, CMake, ANSITerminal</h4>
+      <ul class="font-22">
+        <li>Created Pokemon-based game, where player travels along a map and tries to catch and fight wild Pokemon</li>
+        <li>Parsed Pokemon JSON file and stored information in OCaml's record data structures</li>
+        <li>Generated make-shift GUI using the terminal to display map</li>
+        <li>Created modules to organize and design game's system</li>
+      </ul>
+      <b class="project-description">Details:</b>
+      <div class="row">
+        <p class="project-description">
+          This Pokemon game allows users to interact, catch, and fight wild Pokemon,
+          with the goal of leveling up their own Pokemon to fight stronger Pokemon.
+          Collaborating with a group, I was able to design the game's system through
+          modules to address game features we wanted to include. For example, a
+          Map module was created to handle all the functions and interactions with
+          the map in the game. In addition to modular design, we leveraged
+          a pre-made JSON file storing Pokemon data to construct our Pokemon.
+        </p>
+        <div>
+          <p class="img-descrip">Example of Pokemon battle:</p>
+          <img id="resize-500" src="../public/images/fight-pokemon.png" alt="Pokemon game fight dialogue">
+        </div>
+      </div>
+      <div class="row">
+        <div>
+          <p class="img-descrip">Map of game & Pokemon encounter:</p>
+          <img id="resize-600" src="../public/images/map-pokemon.png" alt="Pokemon game map">
+        </div>
+        <div>
+          <p class="img-descrip">Catching a Pokemon:</p>
+          <img src="../public/images/catch-pokemon.png" alt="Pokemon game catching Pokemon">
+        </div>
+      </div>
+
+      <h4>Challenges:</h4>
+      <p class="project-description">
+        A major portion of the game is the Graphical User Interface (GUI), and
+        due to time constraints for the project, we decided to do a terminal-based
+        map as a work-around, allowing the player to explore the map more. Another
+        challenge we encountered was issues with mutability; for instance, if
+        a Pokemon lost health during a battle, the Pokemon's health would return
+        to its original value after the battle. So maintaining effects after changes
+        were made to Pokemon was one issue we often encountered.
+      </p>
+      <div class="larger-bottom">
+      </div>
+    </div>
+    <div class="cs-proj-descrip">
+      <h3>Data-driven Adventure game and Game engine:</h3>
+      <div class="row">
+        <div>
+          <!-- add image -->
+        </div>
+        <div>
+          <!-- add description -->
+        </div>
+      </div>
+    </div>
+    <a id=" adventure"></a>
+    <a id="rb"></a>
+    <h3>Search Engine using Functors and Red-black trees:</h3>
+    <div class="row">
+      <div>
+        <!-- add image -->
+      </div>
+      <div>
+        <!-- add description -->
+      </div>
+    </div>
+    </div>
+    <h2>C++/C</h2>
+    <div class="cs-proj-descrip">
+      <a id="handwriting"></a>
+      <h3>Handwriting recognition model with multi-threading:</h3>
+      <div class="row">
+        <div>
+          <!--image-->
+        </div>
+        <div>
+          <!--descrip-->
+        </div>
+      </div>
+      <a id="sorting"></a>
+      <h3>Sorting algorithms' implementation and performance analysis:</h3>
+      <div class="row">
+        <div>
+          <!--image-->
+        </div>
+        <div>
+          <!--descrip-->
+        </div>
+      </div>
+    </div>
+    <h2>Java</h2>
+    <div class="cs-proj-descrip">
+      <a id="search-game"></a>
+      <h3>Search-and-retrieve game using Hashmaps:</h3>
+      <div class="row">
+        <div>
+
+        </div>
+        <div>
+
+        </div>
+      </div>
+      <a id="dijkstra"></a>
+      <h3>Dijkstra's shortest path algorithm implementation:</h3>
+      <div class="row">
+        <div>
+
+        </div>
+        <div>
+
+        </div>
+      </div>
+    </div>
+
+
   </main>
 </body>
 <footer>

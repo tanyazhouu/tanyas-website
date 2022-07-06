@@ -36,7 +36,6 @@ header {
   font-weight: bold;
   font-style: normal;
   text-align: center;
-  font-size: 50px;
   padding: 0;
   margin: 40px 0;
 }
@@ -58,18 +57,25 @@ body {
 
 h1 {
   padding: 0;
-  margin: 0;
+  margin: auto;
+  font-size: 75px;
+}
+
+h2 {
+  font-size: 40px;
+  padding: 0;
+  margin: 30px 0 10px 0;
 }
 
 h3 {
   padding: 0;
   margin: 0;
-  font-size: 35px;
+  font-size: 32px;
 }
 
 h4 {
-  margin: 30px 0 0 0;
-  font-size: 21px;
+  margin: 20px 0 0 0;
+  font-size: 24px;
 }
 
 nav {
@@ -83,12 +89,17 @@ nav a {
   color: #9C9C9C;
 }
 
+.cs-link {
+  text-decoration: none;
+  color: #FFCB9B;
+}
+
 nav ul {
   margin: auto;
   font-weight: bold;
-  font-size: 35px;
+  font-size: 32px;
   text-align: left;
-  padding: 0 10px;
+  padding: 0;
   list-style: none;
 }
 
@@ -98,7 +109,7 @@ nav li {
 
 
 .smaller-nav {
-  font-size: 27px;
+  font-size: 28px;
   margin: 15px 15px;
   padding: 0;
 }
@@ -127,17 +138,13 @@ main {
 
 .row {
   display: flex;
+  margin: 0 0 20px 0;
   flex-direction: row;
-  margin: auto;
 }
 
 .middle-content {
   margin: 0 0 0 80px;
-  max-width: 700px;
-}
-
-.ab-middle-content {
-  max-width: 500px;
+  max-width: 550px;
 }
 
 .intro-p {
@@ -162,15 +169,21 @@ main {
   background-attachment: fixed;
 }
 
+.cs-page-title {
+  font-size: 50px;
+}
+
 .timeline {
-  margin: 30px 30px;
+  margin: 30px 0;
   display: grid;
   color: white;
   grid-template-columns: 0fr 2px 2fr;
 }
 
+
 .timeline_component_right {
   margin: 0 20px 40px 20px;
+  max-width: 550px;
 }
 
 .timeline_date_right {
@@ -213,5 +226,82 @@ main {
   list-style-position: inside;
   margin: 0 10px;
   padding: 0;
-  font-size: 17px;
+  font-size: 22px;
+}
+
+.cs-proj-content {
+  margin: 0 0 0 50px;
+  max-width: 850px;
+}
+
+.cs-proj-box {
+  margin: 0 10px 0 0;
+  width: 450px;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.cs-proj-descrip {
+  margin: auto;
+  width: 1000px;
+}
+
+img {
+  margin: 20px;
+  align-self: center;
+  border-radius: 10px;
+
+}
+
+#resize-600 {
+  width: 600px;
+  height: auto;
+}
+
+#resize-500 {
+  width: 500px;
+  height: auto;
+}
+
+#resize-400 {
+  width: 400px;
+  height: auto;
+}
+
+.project-description {
+  font-size: 22px;
+  padding: 0;
+  margin: 10px 0;
+}
+
+.proj-link {
+  color: white;
+  text-decoration: none;
+  font-size: 22px;
+
+}
+
+.proj-link:hover {
+  color: #EEBABA;
+}
+
+.img-descrip {
+  margin: 20px 0 0 20px;
+  padding: 0;
+  font-size: 20px;
+  font-style: italic;
+}
+
+.li-cs {
+  margin: 0 0 15px 0;
+}
+
+.larger-bottom {
+  margin: 0 0 60px 0;
+}
+
+.font-22 {
+  font-size: 22px;
 }
