@@ -58,9 +58,6 @@
               <a class="proj-link" href="#pokemon">
                 <li class="li-cs">Interactive Pokemon Game</li>
               </a>
-              <a class="proj-link" href="#adventure">
-                <li class="li-cs">Data-driven Adventure game and Game engine</li>
-              </a>
               <a class="proj-link" href="#rb">
                 <li>Search Engine using Functors and Red-black trees</li>
               </a>
@@ -270,27 +267,59 @@
       </div>
     </div>
     <div class="cs-proj-descrip">
-      <h3>Data-driven Adventure game and Game engine:</h3>
+      <a id="rb"></a>
+      <h3>Search Engine using Functors and Red-black trees:</h3>
+      <h4>Skills: OCaml, Functors, OUnit Testing</h4>
+      <ul class="font-22">
+        <li>
+          Created search engine to query for words in directories with text files
+        </li>
+        <li>
+          Constructed dictionary interface using Red-black trees and OCaml association lists to
+          observe differences in performance
+        </li>
+        <li>
+          Designed a set data structure interface using a functor that required dictionary
+          data structure to construct the set
+        </li>
+        <li>
+          Leveraged functors for OUnit testing and OCaml's 'Bisect' tool for analyzing tests' code-coverage
+        </li>
+      </ul>
+
+      <h4>Details:</h4>
       <div class="row">
         <div>
-          <!-- add image -->
+          <p class="project-description">
+            This search engine returns the names of text files that include
+            the words in the provided query. Different queries can be entered
+            to obtain results; the "and" query followed by some words will
+            look for files that contain all words in the query, while the "or" query
+            will look for files that contain <em>any</em> of the words in the query.
+            The queries can also include "not" words, in which if files contain
+            the words of the "not" query, they will be excluded from the search result.
+          </p>
+          <p class="project-description">
+            In building the search engine, a dictionary interface was created using both
+            an OCaml association list (linked list) approach and a tree-based approach.
+            The association list approach uses keys and values to create the dictionary
+            and leverages OCaml's higher order functions like "fold_left" or "map" to
+            satisfy required dictionary functions. The tree-based approach uses a "Leaf" type
+            and a "Node" type, containing the node's color (red or black), key-value pair,
+            and a left child and right child. This tree-based approach for the search engine
+            yields better performance due to the logarithmic performance it provides in its
+            operations.
+          </p>
         </div>
         <div>
-          <!-- add description -->
+          <p class="img-descrip">Use of functors to create the engine:</p>
+          <img id="resize-500" src="../public/images/engine-make-functor-search.png" alt="Picture of example functor">
+          <p class="img-descrip">Organized unit tests with modules:</p>
+          <img id="resize-400" src="../public/images/tests-search.png" alt="Functors used for testing">
+          <img src="../public/images/bisect-test.png" alt="Image of code coverage">
         </div>
       </div>
-    </div>
-    <a id=" adventure"></a>
-    <a id="rb"></a>
-    <h3>Search Engine using Functors and Red-black trees:</h3>
-    <div class="row">
-      <div>
-        <!-- add image -->
-      </div>
-      <div>
-        <!-- add description -->
-      </div>
-    </div>
+
     </div>
     <h2>C++/C</h2>
     <div class="cs-proj-descrip">
