@@ -46,11 +46,13 @@ header {
   margin: 20px 0;
 }
 
+
 body {
   opacity: 1;
-  transition-duration: 1s;
+  transition-duration: 1.5s;
   transition-property: opacity;
 }
+
 
 .fade {
   opacity: 0;
@@ -119,6 +121,14 @@ nav li {
   color: white;
 }
 
+.personal-blog-bkg {
+  background: url("../images/bamboo.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
 /* backgrounds different for each page */
 .about-pg-bkg {
   background: url("../images/mtn-bkg-darker.jpg") no-repeat center center fixed;
@@ -149,7 +159,6 @@ main {
 }
 
 .intro-p {
-
   font-weight: bold;
   font-size: 23px;
 }
@@ -256,6 +265,11 @@ img {
 
 }
 
+#resize-800 {
+  width: 800px;
+  height: auto;
+}
+
 #resize-600 {
   width: 600px;
   height: auto;
@@ -269,6 +283,10 @@ img {
 #resize-400 {
   width: 400px;
   height: auto;
+}
+
+#centered {
+  margin: auto;
 }
 
 .project-description {

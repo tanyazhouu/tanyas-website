@@ -8,7 +8,7 @@
   <script defer src="../js/navscript.js" type="text/javascript"></script>
 </head>
 
-<body class="cs-page-bkg fade">
+<body id="body" class="cs-page-bkg">
   <header class="cs-pg-hdr">
     <h1>tanya zhou</h1>
     <h3>cs portfolio: cs projects</h3>
@@ -82,9 +82,6 @@
             <ul class="timeline_text bold">
               <a class="proj-link" href="#search-game">
                 <li class="li-cs">Search-and-retrieve game using Hashmaps</li>
-              </a>
-              <a class="proj-link" href="#dijkstra">
-                <li>Dijkstra's shortest path algorithm implementation</li>
               </a>
             </ul>
           </div>
@@ -316,6 +313,7 @@
           <img id="resize-500" src="../public/images/engine-make-functor-search.png" alt="Picture of example functor">
           <p class="img-descrip">Organized unit tests with modules:</p>
           <img id="resize-400" src="../public/images/tests-search.png" alt="Functors used for testing">
+          <p class="img-descrip">Code coverage using bisect:</p>
           <img src="../public/images/bisect-test.png" alt="Image of code coverage">
         </div>
       </div>
@@ -325,48 +323,152 @@
     <div class="cs-proj-descrip">
       <a id="handwriting"></a>
       <h3>Handwriting recognition model with multi-threading:</h3>
+      <h4>Skills: C++, Python, Linux, CMake, Git</h4>
+      <ul class="font-22">
+        <li>Implemented supervised model that classified images of handwritten digits from a dataset by comparing the
+          image's intensity to the training set's intensities.</li>
+        <li>Organized binary tree and vector data structures via classes, and ptimized methods using function inlining,
+          memoization, and reduction of overall overhead. Used flame graphs to guide optimizations.
+        </li>
+        <li>Binary, linear, and multi-threaded search algorithms were implemented for classification.</li>
+        <li>Analyzed performance and accuracy of each algorithm then characterized measured data with complexity
+          analyses
+          done in big-O notation.</li>
+        <li>Used bash scripts to automate evaluations and Python to visualize the results to compare data.</li>
+      </ul>
+      <h4>Details:</h4>
       <div class="row">
         <div>
-          <!--image-->
+          <p class="project-description">
+            This involved creating four supervised learning models that
+            train and classify images of handwritten digits; HRSLinearSearch,
+            HRSBinarySearch, HRSTreeSearch, and the alternative system (Parallel
+            Linear Search) all rely on the generic resizable <code>Vector</code> and generic
+            sort algorithm, class <code>Image</code>, and generic <code>Tree</code> data structure.
+            HRSLinear, HRSBinary, and the alternative store a <code>Vector</code> as their set of
+            training data and each use different implementations to classify the
+            set of images passed in.</p>
         </div>
         <div>
-          <!--descrip-->
+          <p class="img-descrip">Graph comparing accuracy and execution times of each model:</p>
+          <img src="../public/images/p1-data.png" alt="Data Analysis for CS project">
         </div>
       </div>
+      <div>
+        <p class="project-description">HRSLinear uses a linear search algorithm
+          and HRSBinary sorts then uses a binary search. The concurrent
+          alternative system creates a thread for each partition of the
+          training data then performs a linear search per partition.
+          HRSTreeSearch stores the training data in a <code>Tree</code> and
+          classifies an Image by using intensity to search and traverse
+          through the tree and at a certain level determined by a K parameter, performs
+          an exhaustive search using an image's distance to compare for that subtree.</p>
+      </div>
+      <div class="larger-bottom"></div>
       <a id="sorting"></a>
       <h3>Sorting algorithms' implementation and performance analysis:</h3>
+      <h4>Skills: C++, Linux, CMake, Git</h4>
+      <ul class="font-22">
+        <li>Implemented insertion, selection, merge, quick, and bucket sort, and tested via directed tests and random
+          tests.
+        </li>
+        <li>Quantitatively evaluated each algorithm by inputting variable-length arrays and graphed measured execution
+          times
+        </li>
+        <li>Recorded memory usage (auxiliary heap space usage) for each test for further analysis</li>
+        <li>Leveraged bash scripts to automate testing and analyses</li>
+        <li>
+          Performance and memory usage were characterized via complexity analyses.
+        </li>
+      </ul>
+      <h4>Details:</h4>
       <div class="row">
         <div>
-          <!--image-->
+          <p class="project-description">
+            This project investigates different sorting algorithms,
+            selection sort, merge sort, quick sort, and bucket sort,
+            and the respective performance and heap space usage differences between
+            each of them.
+            This is to provide insight into which algorithm may perform better
+            in certain situations; for instance, if memory resources are limited,
+            one would opt to use a memory-efficient sorting algorithm. The
+            graphs on the side display the average execution times and heap
+            space usage for each algorithm given an input array size to sort (number of elements).
+          </p>
         </div>
         <div>
-          <!--descrip-->
+          <img id="resize-500" src="../public/images/avg-exec-time-data.png"
+            alt="Execution time data for sorting algorithm">
+          <img id="resize-500" src="../public/images/aux-heap-space-data.png"
+            alt="Memory usage data for sorting algorithms">
         </div>
+
       </div>
+      <h4>Analysis:</h4>
+      <p class="project-description"> Complexity analyses in terms of time and auxiliary heap space
+        usage were also done, providing insight into which algorithm may
+        be preferred over others in certain scenarios.
+        Selection sort and bucket sort demonstrated quadratic time
+        complexity but merge and quick sort had loglinear time complexity.
+        As for space usage, selection and quick sort had constant space usage,
+        while the other two had linear space usage. Quantitative evaluations
+        performed via prewritten evaluation programs were also used to plot
+        execution times and auxiliary heap space usage for different array sizes
+        for each of the sorting algorithms, which visualized the differences
+        between algorithms and solidified individual drawbacks or advantages.
+        From the analyses and evaluations, merge sort and quick sort seem
+        to be the ideal sorting algorithms given their average loglinear
+        performance and space usage.</p>
+      <p class="img-descrip">Table showing data collected on each sorting algorithm:</p>
+      <img id="resize-800" src="../public/images/sorting-data-analysis.png"
+        alt="Results from sorting algorithm analysis">
     </div>
+    <div class="larger-bottom"></div>
     <h2>Java</h2>
     <div class="cs-proj-descrip">
       <a id="search-game"></a>
       <h3>Search-and-retrieve game using Hashmaps:</h3>
+      <h4>Skills: Java, JUnit, Java Swing</h4>
+      <ul class="font-22">
+        <li>Game involved searching for a ring in the smallest number of steps in a randomized maze then upon retrieval,
+          returning to the exit collecting as many coins as possible.</li>
+        <li>Leveraged HashMaps, Sets, and other built-in Java Collections to store information about neighboring nodes
+          and
+          their distances to the exit and ring</li>
+        <li>Implemented and tested depth-first search based algorithms to explore maze</li>
+        <li>Implemented Dijkstra's shortest path algorithm to calculate shortest path from current location to exit.
+        </li>
+      </ul>
+      <h4>Details:</h4>
       <div class="row">
         <div>
-
+          <p class="project-description">
+            This project involved developing algorithms that drove a small search-and-retrieve
+            type game, in which a character must first 'search' for a ring in a maze then upon
+            retrieval, the character must return to the exit of the maze while collecting the
+            maximum number of coins that they can. The algorithms that
+            powered the character's movements were all tree-based algorithms and each
+            relied on data structures to store information.
+          </p>
         </div>
         <div>
-
+          <img src="../public/images/game-scram_ccexpress.png" alt="Image of Java Game">
         </div>
       </div>
-      <a id="dijkstra"></a>
-      <h3>Dijkstra's shortest path algorithm implementation:</h3>
-      <div class="row">
-        <div>
-
-        </div>
-        <div>
-
-        </div>
-      </div>
-    </div>
+      <p class="project-description">
+        This involved splitting the project up into two phases: a 'seek' phase
+        and a 'scram' phase, where the character first must find the ring then
+        run out of the maze. The 'seek' phase's problem mainly dealt with
+        developing an algorithm that found the ring in the shortest number of
+        steps in order to maximize the character's score; the more steps
+        they took to find the ring meant a smaller score multiplier. Similarly,
+        the "scram" phase required maximizing the number of coins collected while
+        exiting and exiting within the prescribed number of steps.
+        Each of these algorithms relied on a depth-first-search (DFS) algorithm
+        and the "scram" phase implemented Dijkstra's algorithm once the character
+        reached a threshold number of steps.
+      </p>
+      <div class="larger-bottom"></div>
 
   </main>
 </body>
