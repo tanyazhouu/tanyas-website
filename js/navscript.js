@@ -1,11 +1,4 @@
-
-
-if (document.body.classList.contains('fade')) {
-  document.body.classList.remove('fade');
-  document.body.classList.add('fade');
-} else {
-  document.body.classList.add('fade');
-}
+document.body.classList.remove('fade');
 
 const activePg = window.location.pathname;
 const navLinks = document.querySelectorAll('nav a').forEach(link => {
